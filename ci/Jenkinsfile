@@ -10,21 +10,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Provider Building..'
+                echo 'Consumer Building..'
                 sh 'go version'
                 // Add your build commands here
             }
         }
         stage('Test') {
             steps {
-                echo 'Provider Testing..'
-                // Add your test commands here
+                echo 'Consumer Testing..'
+                
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Provider Deploying....'
-                // Add your deployment commands here
+                echo 'Consumer Deploying....'
+                
             }
         }
     }
