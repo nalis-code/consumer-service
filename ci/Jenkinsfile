@@ -1,12 +1,10 @@
 pipeline {
     agent any
 
-    tools { 
-        go 'Go1.21' 
-    }
-
     environment {
-        GO111MODULE = 'on'
+        GOPATH = "${env.WORKSPACE}/go"
+        GOBIN = "${GOPATH}/bin" 
+        PATH = "${GOPATH}:${GOBIN}:/usr/local/go/bin:${env.PATH}" 
     }
 
     stages {
