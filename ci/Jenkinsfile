@@ -15,9 +15,9 @@ pipeline {
                 // Add your build commands here
             }
         }
-        stage('Test') {
+        stage('Unit Tests') {
             steps {
-                echo 'Consumer Testing..'
+                sh 'make test-unit'
                 
             }
         }
